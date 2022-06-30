@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/TotalQuestions"
+        android:layout_width="212dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal"
+        android:text="@string/Total Questions"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ThisWillBeTheQuestion"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/ThisWillBeTheQuestion"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ThisWillBeTheQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/choices_layout"
+        android:orientation="horizontal"
+        android:textStyle="bold"
+        android:text="@string/This will be the question"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="169dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/choices_layout"
+        android:orientation="vertical"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginTop="15dp"
+
+        android:background="@color/white"
+        android:text="Ans A"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ThisWillBeTheQuestion"
+        app:layout_constraintStart_toStartOf="@+id/ThisWillBeTheQuestion"
+        app:layout_constraintTop_toBottomOf="@+id/ThisWillBeTheQuestion" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ans_B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginTop="35dp"
+        android:background="@color/white"
+        android:text="Ans B"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatButton"
+        app:layout_constraintStart_toStartOf="@+id/appCompatButton"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatButton" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ans_C"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:text="Ans C"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ans_B"
+        tools:layout_editor_absoluteY="373dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ans_D"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:text="Ans D"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/ans_C"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="459dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
